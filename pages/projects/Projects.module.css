@@ -1,0 +1,298 @@
+/* Projects page styles */
+.pageHeader {
+  padding: 2rem 0;
+  background-color: #191B51;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 60px; /* Account for the main navbar height */
+  z-index: 99;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.headerVisible {
+  transform: translateY(0);
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+/* Compact header styles */
+.compactHeader {
+  padding: 0.8rem 0;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0 1rem;
+  transition: font-size 0.3s ease;
+}
+
+/* Compact title style */
+.compactTitle {
+  font-size: 1.8rem;
+}
+
+.pageDescription {
+  max-width: 800px;
+  margin: 1rem auto 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+/* Scroll to top button styles */
+.scrollTopButton {
+  transition: all 0.3s ease;
+}
+
+/* Spin animation for the scroll button */
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.filterSection {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filterButton {
+  border: 2px solid #191B51;
+  background-color: transparent;
+  color: #191B51;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.filterButton:hover, .activeFilter {
+  background-color: #191B51;
+  color: white;
+}
+
+.projectsContainer {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #191B51;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectCard {
+  transition: 
+    transform 250ms ease,
+    box-shadow 250ms ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(25, 27, 81, 0.1);
+}
+
+.cardImage {
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardCategory {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(25, 27, 81, 0.9);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #191B51;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.statsSection {
+  background-color: #191B51;
+  color: white;
+  padding: 60px 0;
+  margin-top: 3rem;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.statTitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.testimonialSection {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.testimonialCard {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+}
+
+.quoteIcon {
+  color: #191B51;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.2;
+}
+
+.testimonialText {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialAuthor {
+  font-weight: 600;
+  color: #191B51;
+}
+
+.testimonialRole {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.ctaSection {
+  padding: 4rem 0;
+  background-color: #191B51;
+  color: white;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.ctaDescription {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  background-color: white;
+  color: #191B51;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Animation classes */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fadeInVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filterButton {
+    width: 80%;
+  }
+}

@@ -1,0 +1,73 @@
+.widget {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(3px);
+}
+
+.title {
+  color: #191B51;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.iconWrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(25, 27, 81, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #191B51;
+  flex-shrink: 0;
+}
+
+.messageButton {
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.messageButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.socialLink {
+  color: #191B51;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: #3f4183;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .widget {
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+    padding: 1.2rem;
+  }
+}

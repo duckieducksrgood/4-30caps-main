@@ -1,0 +1,173 @@
+/* Timeline styles */
+.timelineContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Vertical timeline styles (default for mobile) */
+.verticalTimeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.verticalTimeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 3px;
+  background-color: #191B51;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 50px;
+  transition: transform 0.3s ease;
+}
+
+.timelineItem:hover {
+  transform: translateX(5px);
+}
+
+.timelineBullet {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #191B51;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #191B51;
+}
+
+.timelineItem:hover .timelineBullet {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timelineContent {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.timelineItem:hover .timelineContent {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timelineTitle {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  color: #191B51;
+}
+
+.timelineText {
+  color: #555;
+  margin: 0;
+}
+
+/* Horizontal timeline styles (for desktop) */
+@media (min-width: 768px) {
+  .horizontalTimeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  
+  .horizontalTimeline::before {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #191B51;
+  }
+  
+  .horizontalItem {
+    position: relative;
+    flex: 1;
+    padding: 0 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .horizontalItem:hover {
+    transform: translateY(-10px);
+  }
+  
+  .horizontalBullet {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #191B51;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #191B51;
+  }
+  
+  .horizontalItem:hover .horizontalBullet {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .horizontalContent {
+    padding-top: 70px;
+    transition: transform 0.3s ease;
+  }
+  
+  .horizontalTitle {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    color: #191B51;
+  }
+  
+  .horizontalText {
+    color: #555;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Add indicators to show progression */
+  .horizontalItem::after {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #4dabf7;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+
+  .horizontalItem:hover::after {
+    transform: scaleX(1);
+  }
+}

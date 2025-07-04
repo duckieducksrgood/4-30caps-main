@@ -1,0 +1,132 @@
+.title {
+  font-size: rem(34px);
+  font-weight: 900;
+
+  @media (max-width: mantine-breakpoint-sm) {
+    font-size: rem(24px);
+  }
+}
+
+.description {
+  max-width: rem(600px);
+  margin: auto;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-blue-filled);
+    width: rem(45px);
+    height: rem(2px);
+    margin-top: var(--mantine-spacing-sm);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card {
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+}
+
+.cardTitle {
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-blue-filled);
+    width: rem(45px);
+    height: rem(2px);
+    margin-top: var(--mantine-spacing-sm);
+  }
+}
+
+/* Hero section styles */
+.heroSection {
+  position: relative;
+  color: white;
+}
+
+.heroTitle {
+  font-size: rem(48px);
+  font-weight: 900;
+  color: white;
+  
+  @media (max-width: mantine-breakpoint-sm) {
+    font-size: rem(32px);
+  }
+}
+
+.heroText {
+  font-size: rem(20px);
+  max-width: rem(700px);
+  margin: auto;
+  
+  @media (max-width: mantine-breakpoint-sm) {
+    font-size: rem(16px);
+  }
+}
+
+/* Core values styles */
+.valuePaper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: rem(30px);
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.valueIcon {
+  background-color: var(--mantine-color-blue-1);
+  color: var(--mantine-color-blue-filled);
+}
+
+/* Work process styles */
+.workProcessSection {
+  background-color: #f8f9fa;
+}
+
+.timelineWrapper {
+  max-width: rem(800px);
+  margin: 0 auto;
+  padding: rem(30px);
+}
+
+.processCardsWrapper {
+  background-color: white;
+}
+
+/* Stats styles */
+.statCard {
+  text-align: center;
+  padding: rem(20px);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.statValue {
+  color: var(--mantine-color-blue-filled);
+}
+
+/* CTA section */
+.ctaSection {
+  position: relative;
+  color: white;
+}
+
+.ctaButton {
+  background-color: var(--mantine-color-blue-filled);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  
+  &:hover {
+    background-color: var(--mantine-color-blue-7);
+    transform: translateY(-2px);
+  }
+}

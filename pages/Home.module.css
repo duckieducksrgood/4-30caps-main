@@ -1,0 +1,197 @@
+/* Home page styles */
+.header {
+  padding: 2rem 0;
+  background-color: #191B51;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 60px; /* Account for the main navbar height */
+  z-index: 99; /* Lower than main header but still high */
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.headerVisible {
+  transform: translateY(0);
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+.companyName {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* Responsive company name */
+@media (max-width: 768px) {
+  .companyName {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .companyName {
+    font-size: 1.6rem;
+  }
+}
+
+.navButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.navButton {
+  border: 2px solid white;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.navButton:hover {
+  background-color: white;
+  color: #191B51;
+}
+
+/* Styles for the collapsed header */
+.collapsedHeader {
+  padding: 0.75rem 0;
+  cursor: pointer;
+}
+
+.headerDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.headerArrow {
+  transition: transform 0.3s ease;
+}
+
+.headerArrowOpen {
+  transform: rotate(180deg);
+}
+
+.philosophySection {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.philosophyHeading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #191B51;
+  margin-bottom: 1rem;
+}
+
+.philosophyText {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.philosophyQuote {
+  font-style: italic;
+  font-weight: 600;
+  color: #555;
+  margin: 2rem 0;
+  font-size: 1.3rem;
+}
+
+.carouselWrapper {
+  scroll-margin-top: 60px; /* Accounts for header height */
+}
+
+.philosophyWrapper {
+  scroll-margin-top: 60px; /* Accounts for header height */
+}
+
+.featuresSection {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.featureCard {
+  padding: 25px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(25, 27, 81, 0.1);
+}
+
+.featureTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #191B51;
+}
+
+.featureDescription {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.statsContainer {
+  background-color: #191B51;
+  color: white;
+  padding: 60px 0;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.statTitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.timelineSection {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.servicesSection {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.serviceCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(25, 27, 81, 0.1);
+}
+
+.serviceIcon {
+  margin-bottom: 10px;
+}

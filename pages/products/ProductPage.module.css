@@ -1,0 +1,287 @@
+.search {
+  width: 100%;
+}
+
+/* Product page header styles - similar to Projects page */
+.pageHeader {
+  padding: 2rem 0;
+  background-color: #191B51;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 60px; /* Account for the main navbar height */
+  z-index: 99;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); /* Faster transition */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.headerVisible {
+  transform: translateY(0);
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+/* Compact header styles */
+.compactHeader {
+  padding: 0.5rem 0; /* Reduced padding for even more compact header */
+  transform: translateY(0);
+  animation: slideDown 0.2s ease-out;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0 1rem;
+  color: white;
+  transition: all 0.2s ease; /* Faster transition */
+}
+
+/* Compact title style */
+.compactTitle {
+  font-size: 1.8rem;
+}
+
+.pageDescription {
+  max-width: 800px;
+  margin: 1rem auto 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: white;
+  padding: 0 1rem;
+  transition: all 0.2s ease; /* Faster transition */
+}
+
+/* Scroll to top button styles */
+.scrollTopButton {
+  transition: all 0.3s ease;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.activeFiltersContainer {
+  background: linear-gradient(to right, rgba(233, 242, 253, 0.95), rgba(217, 235, 255, 0.95));
+  border: 1px solid var(--mantine-color-blue-2);
+  transition: all 0.3s ease;
+  animation: slideDown 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filterBadge {
+  transition: all 0.2s ease;
+  border: 1px solid var(--mantine-color-blue-2);
+  background-color: var(--mantine-color-blue-0);
+  padding: 0 8px;
+  height: 28px;
+  animation: scaleIn 0.3s ease;
+  animation-fill-mode: both;
+}
+
+.filterBadge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background-color: var(--mantine-color-blue-1);
+}
+
+.filterRemoveButton {
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.filterRemoveButton:hover {
+  opacity: 1;
+  background-color: var(--mantine-color-red-1);
+  color: var(--mantine-color-red-7);
+}
+
+.clearButton {
+  transition: all 0.2s;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.clearButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.categoryHeading {
+  animation: fadeIn 0.5s ease;
+}
+
+.mobileFilterButton {
+  animation: fadeIn 0.5s ease;
+  transition: all 0.2s;
+}
+
+.mobileFilterButton:hover {
+  transform: translateY(-2px);
+}
+
+/* Animation Keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseHighlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(66, 153, 225, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(66, 153, 225, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(66, 153, 225, 0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.filterButton {
+  transition: all 0.2s;
+}
+
+.filterButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.categorySidebar {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.customOrderButton {
+  transition: all 0.3s ease;
+}
+
+.customOrderButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.productContainer {
+  min-height: 400px;
+  transition: opacity 0.3s ease;
+}
+
+.skeletonPulse {
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+  background: linear-gradient(90deg, 
+    var(--mantine-color-gray-1) 25%, 
+    var(--mantine-color-gray-3) 50%, 
+    var(--mantine-color-gray-1) 75%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.selectedCategory {
+  animation: pulseHighlight 1s ease-in-out;
+}
+
+.newSelection {
+  animation: bounceIn 0.6s ease-in-out;
+}
+
+.categoryActive {
+  position: relative;
+}
+
+.categoryActive::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--mantine-color-blue-6);
+  border-radius: 50%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 100%;
+  }
+  
+  .filterDrawer {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}

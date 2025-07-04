@@ -1,0 +1,26 @@
+.badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+  height: auto !important;
+}
+
+.badgeBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.badgeText {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}

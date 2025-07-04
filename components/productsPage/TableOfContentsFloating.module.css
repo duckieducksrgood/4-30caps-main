@@ -1,0 +1,49 @@
+.root {
+  --link-height: rem(38px);
+  --indicator-size: rem(10px);
+  /* Increase the offset to move the indicator away from the text */
+  --indicator-offset: calc((var(--link-height) - var(--indicator-size)) / 2);
+  position: relative;
+  padding-left: rem(15px); /* Add padding to the left to create more space */
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: var(--mantine-color-text);
+  line-height: var(--link-height);
+  font-size: var(--mantine-font-size-sm);
+  height: var(--link-height);
+  border-top-right-radius: var(--mantine-radius-sm);
+  border-bottom-right-radius: var(--mantine-radius-sm);
+  border-left: rem(2px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+  transition: all 0.2s ease;
+  padding-left: rem(15px); /* Increased padding to match the root's padding-left */
+  padding-right: 8px;
+}
+
+.link:hover {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  transform: translateX(2px);
+}
+
+.linkActive {
+  font-weight: 500;
+  color: light-dark(var(--mantine-color-blue-7), var(--mantine-color-blue-4));
+  background-color: light-dark(var(--mantine-color-blue-0), var(--mantine-color-dark-5));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.indicator {
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: rem(2px) solid light-dark(var(--mantine-color-blue-7), var(--mantine-color-blue-4));
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  height: var(--indicator-size);
+  width: var(--indicator-size);
+  border-radius: var(--indicator-size);
+  position: absolute;
+  /* Move the indicator more to the left to create more space between it and the text */
+  left: calc(var(--indicator-size) / -2 - rem(4));
+  box-shadow: 0 0 8px rgba(66, 153, 225, 0.6);
+}
